@@ -24,6 +24,7 @@ namespace DepedencyInjectionTutorial
             client.BaseAddress = new Uri(uri);
             client.MaxResponseContentBufferSize = 256000;
 
+
             var response = await client.GetAsync(uri);
             response.EnsureSuccessStatusCode();
             var responseContent = await response.Content.ReadAsByteArrayAsync();
